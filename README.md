@@ -1,4 +1,4 @@
-# Advent of Code 2023
+# 🎄 Advent of Code 2023 🎁
 
 Welcome to my solutions to the 2023 edition of Advent of Code!
 
