@@ -4,7 +4,7 @@ import gleam/list
 import gleam/option.{Some}
 import gleam/regex
 import gleam/result
-import utils.{PartOne, PartTwo, ProblemPart}
+import utils.{type ProblemPart, PartOne, PartTwo}
 
 type Position(number) =
   #(number, number)
