@@ -1,23 +1,24 @@
 import gleam/option.{Some}
 import gleeunit/should
-import day5.{Closed}
+import day5
+import interval.{Closed}
 import utils.{PartOne, PartTwo}
 
 pub fn intersect_test() {
-  day5.intersect(Closed(3, 6), Closed(1, 8))
+  interval.intersect(Closed(3, 6), Closed(1, 8))
   |> should.equal(#(Some(Closed(3, 6)), []))
 
-  day5.intersect(Closed(1, 8), Closed(3, 6))
+  interval.intersect(Closed(1, 8), Closed(3, 6))
   |> should.equal(#(Some(Closed(3, 6)), [Closed(1, 2), Closed(7, 8)]))
 
-  day5.intersect(Closed(1, 6), Closed(3, 8))
+  interval.intersect(Closed(1, 6), Closed(3, 8))
   |> should.equal(#(Some(Closed(3, 6)), [Closed(1, 2)]))
 
-  day5.intersect(Closed(3, 8), Closed(1, 6))
+  interval.intersect(Closed(3, 8), Closed(1, 6))
   |> should.equal(#(Some(Closed(3, 6)), [Closed(7, 8)]))
 
-  day5.intersect(day5.Closed(57, 69), day5.Closed(53, 60))
-  |> should.equal(#(Some(day5.Closed(57, 60)), [day5.Closed(61, 69)]))
+  interval.intersect(Closed(57, 69), Closed(53, 60))
+  |> should.equal(#(Some(Closed(57, 60)), [Closed(61, 69)]))
 }
 
 const example = "seeds: 79 14 55 13
