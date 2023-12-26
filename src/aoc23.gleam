@@ -27,6 +27,7 @@ import day20
 import day21
 import day22
 import day23
+import day24
 import utils.{PartOne, PartTwo}
 
 pub fn run(cli: glint.CommandInput) {
@@ -54,6 +55,7 @@ pub fn run(cli: glint.CommandInput) {
     ["day21", ..] -> day21.solve
     ["day22", ..] -> day22.solve
     ["day23", ..] -> day23.solve
+    ["day24", ..] -> day24.solve
   }
   let part = case cli.args {
     [_, "part1", ..] -> PartOne
